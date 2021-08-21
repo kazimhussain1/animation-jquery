@@ -111,9 +111,9 @@ $(function () {
       triggerHook: 0.9,
     })
       .setClassToggle(revealElements[i], "visible") // add class toggle
-      .addIndicators({
-        name: "digit " + (i + 1),
-      }) // add indicators (requires plugin)
+      // .addIndicators({
+      //   name: "digit " + (i + 1),
+      // }) // add indicators (requires plugin)
       .addTo(controller);
   }
 
@@ -160,7 +160,7 @@ $(function () {
     triggerHook: 0.75,
   })
     .addTo(controller)
-    .addIndicators("Showcase Trigger") // add indicators (requires plugin)
+    // .addIndicators("Showcase Trigger") // add indicators (requires plugin)
     .on("progress", function (e) {
       showcaseImages[0].css({
         top: `-${
@@ -210,7 +210,7 @@ $(function () {
     triggerHook: 0.95,
   })
     .addTo(controller)
-    .addIndicators("circle-trigger") // add indicators (requires plugin)
+    // .addIndicators("circle-trigger") // add indicators (requires plugin)
     .on("progress", function (e) {
       const scale = e.progress;
       $(".email-circle").css({
