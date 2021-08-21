@@ -1,0 +1,549 @@
+@font-face{
+    font-family: "Monsieur";
+    src: url("./MonsieurLaDoulaise-Regular.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "IMFell";
+    src: url("./IMFellDoublePica-Italic.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "CardoItalic";
+    src: url("./Cardo-Italic.ttf") format("truetype");
+}
+
+:root{
+    --colorPrimary : #CAB193;
+    --colorPrimaryLight : #EBE3CF;
+}
+
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#242424",GradientType=1);
+}
+
+button { 
+    border:none; 
+    padding:0; 
+    margin:0;
+    background-color:transparent;
+    outline: none !important;
+    box-shadow: none !important;
+} 
+
+
+
+
+.Monsieur{
+    font-family: "Monsieur";
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.CardoItalic{
+    font-family: "CardoItalic";
+    font-weight: 400;
+}
+
+.ana{
+    background-image: url("./ana.webp");
+    min-height: 700px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.bg-color-beige{
+ background-color: #F5EFE1;
+}
+
+.about-inner{
+    position: relative;
+    overflow: hidden;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.text-marquee{
+    color: var(--colorPrimary);
+    font-family: "IMFell";
+    position: absolute;
+    white-space: nowrap;
+text-overflow: ellipsis;
+display: inherit;
+
+}
+
+.landing{
+    position: relative;
+}
+
+.main-heading{
+    display: flex;
+    min-height: 150px;
+    align-items: center;
+}
+
+.main-heading >*:first-child{
+    flex-grow: 1;
+    flex-direction: row;
+}
+.main-heading
+
+.slide-elipse-container{
+    position: relative;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.slide-elipse{
+    position: absolute;
+    border: solid  var(--colorPrimary) 2px;
+    border-radius: 50%;
+    color: var(--colorPrimary);
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.marquee-2-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.marquee-2{
+    color: var(--colorPrimary);
+    font-size: 7vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inherit;
+}
+
+.marquee-2-italic{
+    font-family: "IMFell";
+    color:  #B8C7B3;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline;
+   
+}
+
+.reveal {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transform: scale(0.5) translateY(50%);
+    -moz-transform: scale(0.5)  translateY(50%);
+    -ms-transform: scale(0.5)  translateY(50%);
+    -o-transform: scale(0.5)  translateY(50%);
+    transform: scale(0.5)  translateY(50%);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.reveal.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+.circle-picture-container{
+    position: absolute;
+}
+
+.picture-ball{
+    position: absolute;
+    z-index: 1000;
+}
+
+.showcase{
+    min-height: 150vh;
+    position: relative;
+}
+
+.showcase-row{
+    min-height: 150vh;
+    display: flex;
+    align-items: flex-end;
+    overflow-x: hidden;
+}
+
+.showcase-1{
+    flex: 10;
+    position: relative;
+    margin-bottom: 64px;
+}
+
+.showcase-2{
+    flex: 7;
+    position: relative;
+    margin-bottom: 64px;
+}
+
+.showcase-3{
+    flex: 8;
+    position: relative;
+    margin-bottom: 64px;
+}
+
+.showcase-margin-sides{
+    flex: 3;
+}
+
+.showcase-margin{
+    flex: 4;
+}
+
+.showcase-img{
+    width:100%; 
+    height:auto;
+    position: absolute;
+}
+
+.instagram-image {
+    width: 15vw;
+    height: 15vw;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: -15vw;
+    margin:0 0 0 -7.5vw;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.showcase-text-container{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border: 4px solid var(--colorPrimary);
+    background-color: rgba(0,0,0,0.25);
+}
+.showcase-text{
+    color: #ffffff;
+    font-size: 7vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inherit;
+}
+
+.showcase-elipse-container{
+    position: relative;
+    margin-top: 0;
+    top: -16px;
+}
+
+.showcase-elipse{
+    border: solid  var(--colorPrimary) 2px;
+    border-radius: 50%;
+    color: var(--colorPrimary);
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: all 0.5s ease;
+}
+
+.showcase-elipse:hover{
+   background-color: var(--colorPrimary);
+   color: white;
+}
+
+.contact-us{
+   min-height: 120vh;
+   height: auto;
+}
+
+.marquee-3-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.marquee-3-inner{
+    position: absolute;
+    display: inline-block;
+    top:0px
+}
+
+.marquee-3{
+    color: var(--colorPrimary);
+    font-size: 6vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inherit;
+}
+
+.project-buttons{
+    position: relative;
+}
+
+.left-button{
+    width: 250px;
+    height: 70px;
+    border: 2px solid var(--colorPrimary);
+    border-radius: 8px;
+    background-color: var(--colorPrimaryLight);
+    transform: skewX(-20deg);
+    position: relative;
+    margin: auto;
+    float: right;
+}
+
+.left-button-inner{
+    width: 250px;
+    height: 70px;
+    border: 2px solid var(--colorPrimary);
+    border-radius: 8px;
+    background-color: #F5EFE1;
+    /* transform: translate(calc(-3px - 8px), calc(-2px - 8px)); */
+    transform: translate(-11px, -10px);
+}
+
+.right-button{
+    width: 250px;
+    height: 70px;
+    border: 2px solid var(--colorPrimary);
+    border-radius: 8px;
+    background-color: var(--colorPrimaryLight);
+    transform: skewX(20deg);
+    position: relative;
+    margin: auto;
+    float: left;
+}
+
+.right-button-inner{
+    width: 250px;
+    height: 70px;
+    border: 2px solid var(--colorPrimary);
+    border-radius: 8px;
+    background-color: #F5EFE1;
+    /* transform: translate(calc(-3px + 8px), calc(-2px  - 8px)); */
+    transform: translate(5px, -10px);
+}
+
+.email-illustration{
+    position: relative;
+    height: 300px;
+    margin-top: 48px;
+}
+
+.email-circle{
+    position: relative;
+    background-color: #F5EFE1;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 1000;
+    margin: auto;
+    transform: scale(0);
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.email-large{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    text-align: center;
+    margin: 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.email-large>p{
+    font-size: 0.8em;
+    font-weight: 600;
+    opacity: 0;
+}
+
+
+
+.large-email-bottom-text{
+   position: relative;
+}
+
+.large-email-top-text{
+   position: relative;
+   margin-bottom: 0 !important;
+}
+
+
+
+
+.leaves{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.leaves-inner{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    transform: scale(0);
+}
+
+
+
+.top-leaves{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    transform: scale(0);
+}
+
+.bottom-leaves{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+}
+
+
+
+@media only screen and (max-width: 1280px) {
+
+    .showcase-margin-sides{
+        flex:1;
+    }
+    
+    .showcase-margin{
+        flex: 3;
+    }
+
+    .showcase{
+        min-height: 115vh ;
+    }
+    
+    .showcase-row{
+        min-height: 115vh ;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .slide-elipse-column{
+        display: none;
+    }
+
+    .showcase-margin-sides{
+        flex: 0.5;
+    }
+    
+    .showcase-margin{
+        flex: 2;
+    }
+
+    .showcase{
+        min-height: 100vh;
+    }
+    
+    .showcase-row{
+        min-height: 100vh;
+       
+    }
+
+    .instagram-image {
+        width: 20vw;
+        height: 20vw;
+        left: 50%;
+        top: -15vw;
+        margin:0 0 0 -10vw;
+    }
+
+    .right-button{
+        float: none;
+     }
+
+     .left-button{
+        float: none;
+     }
+
+     .email-large>h1{
+        font-size: 5.5vw;
+        
+    }
+
+    .showcase-elipse-container{
+        display: none;
+    }
+     
+    .picture-ball{
+
+    
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .header-email{
+        display: none;
+        
+    }
+
+    h1{
+        font-size: 1.85em;
+    }
+
+    nav>*{
+        font-size: 0.8em;
+    }
+
+    .showcase-margin-sides{
+        flex: 0;
+    }
+    
+    .showcase-margin{
+        flex: 1;
+    }
+
+    .showcase{
+        min-height: 80vh;
+    }
+    
+    .showcase-row{
+        min-height: 80vh;
+        display: flex;
+        align-items: flex-end;
+        overflow-x: hidden;
+    }
+
+    
+    .email-large>h1{
+        font-size: 6vw;
+        
+    }
+
+    .picture-ball{
+
+        
+    
+    }
+    
+}
+
